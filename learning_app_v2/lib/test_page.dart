@@ -48,9 +48,9 @@ class _TestPageState extends State<TestPage> {
 
   Future<void> initializeTts() async {
     await flutterTts.setLanguage("en-US"); // Set language
-    await flutterTts.setSpeechRate(0.5); // Set speech rate (0.0 to 1.0)
+    await flutterTts.setSpeechRate(0.001); // Set speech rate (0.0 to 1.0)
     await flutterTts.setVolume(1.0); // Set volume (0.0 to 1.0)
-    await flutterTts.setPitch(1.0); // Set pitch (0.5 to 2.0)
+    await flutterTts.setPitch(0.5); // Set pitch (0.5 to 2.0)
   }
 
   Future<void> speak(String text) async {
@@ -58,11 +58,12 @@ class _TestPageState extends State<TestPage> {
   }
 
   Future<void> fetchRandomSpellingWord() async {
-    final response = await http.get(Uri.parse('http://127.0.0.1:5000/api/random-spelling-word'));
+    final response = await http.get(Uri.parse('http://10.0.2.2:5000/api/random-spelling-word'));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
+      print("$data");
       setState(() {
-        ageGroup = data ['Age Group'];
+        ageGroup = data['Age Group'];
         currentWord = data['Word'];
         difficulty = data['Difficulty Level'];
       });
