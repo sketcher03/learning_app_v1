@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/model.dart';
-import 'package:learning_app/test_page.dart';
+//import 'package:learning_app/test_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'age_Group_page.dart'; // Import the AgeGroup Page
 
 class TopicPage extends StatelessWidget {
   final Subject subject;
@@ -51,7 +52,7 @@ class TopicPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => TestPage(topic: topic),
+                      builder: (context) => AgeGroupPage(topic: topic),
                     ),
                   );
                 },
