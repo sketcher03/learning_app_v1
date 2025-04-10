@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:learning_app/score_page.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:google_fonts/google_fonts.dart';
 
 class TestPage extends StatefulWidget {
   final String topic;
