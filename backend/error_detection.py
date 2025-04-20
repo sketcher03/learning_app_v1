@@ -150,7 +150,7 @@ def detect_double_letter_mistake(correct, answer):
                 reset+=1
                 return 2  # Double letter added
 
-    if count1<=1 and count2<=1:
+    if count1==1 and count2==1:
         return 3 # Double letter substitution
     elif count1>1 or count2>1:
         return 4 # Multiple double letter error
@@ -435,7 +435,7 @@ def generate_error_report(df, ageGroup, difficulty):
 
         # Length Difference Description
         length_diff = row['length_diff']
-        if length_diff <= 2 or length_diff <= 3 and edit_distance > 3:
+        if  length_diff <= 3 and edit_distance > 3:
             length_diff_message = "You got the length of the word right, but missed some details. You're close! 🧐"
             length_diff_desc = "You seem to have grasped the length of the word correctly but may have missed a key part of the word. This could suggest that you understood the word's structure but didn't recall the exact letters or spelling correctly."
         elif length_diff > 6 or length_diff > 7:
