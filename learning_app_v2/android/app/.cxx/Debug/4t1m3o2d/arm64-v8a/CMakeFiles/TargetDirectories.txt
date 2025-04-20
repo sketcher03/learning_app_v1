@@ -1,0 +1,2 @@
+D:/dev/learning_app_v1/learning_app_v2/android/app/.cxx/Debug/4t1m3o2d/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/dev/learning_app_v1/learning_app_v2/android/app/.cxx/Debug/4t1m3o2d/arm64-v8a/CMakeFiles/rebuild_cache.dir

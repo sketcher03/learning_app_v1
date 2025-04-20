@@ -22,19 +22,15 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.white, Colors.orange.shade50],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
+          color: Colors.white
         ),
         child: ListView.builder(
           itemCount: subjects.length,
           itemBuilder: (context, index) {
             final subject = subjects[index];
             return Card(
-              margin: const EdgeInsets.all(10),
-              elevation: 5,
+              margin: const EdgeInsets.all(20),
+              elevation: 2,
               child: ListTile(
                 leading: const Icon(Icons.language, color: Colors.orange),
                 title: Text(

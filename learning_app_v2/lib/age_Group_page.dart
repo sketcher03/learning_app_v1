@@ -76,7 +76,12 @@ class AgeGroupPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> ageGroups = ["5-6 years", "7-8 years", "9-10 years", "11-12 years"]; // Example age groups
+    List<String> ageGroups = [
+      "5-6 years",
+      "7-8 years",
+      "9-10 years",
+      "11-12 years"
+    ]; // Example age groups
 
     return Scaffold(
       appBar: AppBar(title: Text("Select Age Group")),
@@ -98,7 +103,8 @@ class AgeGroupPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TestPage(topic: topic, ageGroup: ageGroup),
+                    builder: (context) => TestPage(
+                        topic: topic, ageGroup: ageGroup, difficulty: 'easy'),
                   ),
                 );
               },
@@ -109,4 +115,4 @@ class AgeGroupPage extends StatelessWidget {
     );
   }
 }
- //}
+//}

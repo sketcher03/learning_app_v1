@@ -25,11 +25,7 @@ class TopicPage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.lime.shade100, Colors.white],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
+          color: Colors.white
         ),
         child: ListView.builder(
           itemCount: subject.topics.length,
@@ -37,13 +33,13 @@ class TopicPage extends StatelessWidget {
             final topic = subject.topics[index];
             return Card(
               margin: const EdgeInsets.all(20),
-              elevation: 5,
+              elevation: 2,
               child: ListTile(
-                leading: const Icon(Icons.book, color: Colors.green),
+                leading: const Icon(Icons.book, color: Colors.deepOrange),
                 title: Text(
                   topic,
                   style: GoogleFonts.poppins(
-                    fontSize: 30,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

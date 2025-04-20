@@ -7,6 +7,6 @@ class Subject {
 
 // Sample Data
 List<Subject> subjects = [
-  Subject(name: "English", topics: ["Spelling", "Grammar", "Sentence"]),
+  Subject(name: "English", topics: ["Spelling", "Grammar"]),
   Subject(name: "Math", topics: ["Addition", "Subtraction", "Multiplication"]),
 ];
